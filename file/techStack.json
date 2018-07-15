@@ -1,0 +1,32 @@
+{
+  "Scale Definitions": {
+    "10": "Inventor of the language",
+    "5": "Can make it work after some Googling",
+    "0": "What IS this gibberish"
+  },
+  "Language/Framework": {
+    "Java": 8,
+    "Spring": 8,
+    "JavaScript": 4,
+    "React": 7,
+    "Redux": 5,
+    "Mandarin Chinese": 9,
+    "Mockito/PowerMockito": 9,
+    "Jest/Karma": 5,
+    "SQL": 4
+  },
+  "Agile Methodologies": {
+    "Scrum": "PSM I, scrum.org",
+    "Scaled Agile": "SAFe Agilist & SAFe Practitioner (4.0), Scaled Agile Inc."
+  },
+  "Dev Tools": {
+    "git": 9,
+    "jenkins": 5,
+    "linux": 6,
+    "aws": "coming soon"
+  },
+  "Misc": {
+    "OOD/OOP": 9.5,
+    "Functional programming": 1
+  }
+}

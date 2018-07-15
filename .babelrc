@@ -1,0 +1,23 @@
+{
+  "plugins": ["transform-decorators-legacy", ["babel-plugin-transform-builtin-extend", {
+    "globals": ["Error", "Map"]
+  }]],
+  "presets": [
+    "env",
+    "react",
+    "stage-0"
+  ],
+  "env": {
+    "test": {
+      "plugins": [
+        ["istanbul", {
+          "useInlineSourceMaps": false,
+          "exclude": [
+            "**/*.spec.js",
+            "loadtests.js"
+          ]
+        }]
+      ]
+    }
+  }
+}
