@@ -5,12 +5,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import Button from '@material-ui/core/Button';
-import Dialog from '@material-ui/core/Dialog';
-import DialogActions from '@material-ui/core/DialogActions';
-import DialogContent from '@material-ui/core/DialogContent';
-import DialogContentText from '@material-ui/core/DialogContentText';
-import DialogTitle from '@material-ui/core/DialogTitle';
-import Slide from '@material-ui/core/Slide';
+import { Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Slide } from '@material-ui/core';
+
 
 const styles = theme => ({
   root: {
@@ -22,30 +18,34 @@ const styles = theme => ({
     flexDirection: 'column'
   },
   button: {
-    margin: theme.spacing.unit
+    margin: theme.spacing(2)
   }
 });
 
-function Transition(props) {
-  return <Slide direction="up" {...props} />;
-}
+const Transition = React.forwardRef(function Transition(props, ref) {
+  return <Slide direction="up" ref={ref} {...props} />;
+});
 
 class Contact extends React.Component {
   state = {
     open: false
   };
+
   onClick = () => {
     this.setState({ open: true });
   };
+
   onClose = () => {
     this.setState({ open: false });
   };
+
   onLink = () => {
     window.open(
       'https://www.linkedin.com/in/nadia-bernhardt-8864394b/',
       '_blank'
     );
   };
+
   render() {
     const { classes } = this.props;
 
@@ -72,7 +72,6 @@ class Contact extends React.Component {
         <Dialog
           open={this.state.open}
           TransitionComponent={Transition}
-          keepMounted
           onClose={this.onClose}
           aria-labelledby="dialog-slide-title"
           aria-describedby="dialog-slide-description"

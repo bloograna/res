@@ -22,30 +22,29 @@ const styles = {
   }
 };
 
-class About extends React.Component {
+class About extends React.PureComponent {
   processContent(classes) {
     const splited = aboutSection.split('\n');
-    let lines = [];
-
-    for (const stuff of splited) {
-      lines.push(
-        <Typography className={classes.textBlock} >{stuff}</Typography>
-      );
-    }
-    return lines;
+    return splited.map((item, index) => <Typography className={classes.textBlock} key={`about-${index}`}>{item}</Typography>)
   }
 
   render() {
     const { classes } = this.props;
     let actualContent = this.processContent(classes);
 
-    return <div className={classes.root}>{actualContent}</div>;
+    return (
+      <div className={classes.root}>{actualContent}</div>
+    )
   }
 }
 
 About.propTypes = {
   children: PropTypes.node,
   classes: PropTypes.object.isRequired
+};
+
+About.contextTypes = {
+  router: PropTypes.object
 };
 
 export default withStyles(styles)(About);

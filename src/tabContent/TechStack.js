@@ -4,6 +4,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import grey from '@material-ui/core/colors/grey';
 import techStack from '../../file/techStack';
+// import { PolarArea } from 'react-chartjs';
 
 const styles = {
   root: {
@@ -22,6 +23,7 @@ const styles = {
     textAlign: 'left'
   }
 };
+
 
 class TechStack extends React.Component {
   render() {
