@@ -1,0 +1,17 @@
+{
+  "Can jump right into": [
+    "Java (8), SpringBoot, (Power)Mockito",
+    "JS (ES6), react.js, redux.js/redux-observable.js, Jest, Enzyme"
+  ],
+  "Need brushing up": [
+    "RedHat Enterprice Linux, client/server distributed architecture, relational databases (MySQL)",
+    "Cloud-based development resources (EC2, S3, OpenStack)",
+    "Bash scripting",
+    "Jenkins, Selenium",
+    "ReactNative"
+  ],
+  "Agile Certifications": [
+    "Scrum - PSM I, scrum.org",
+    "Scaled Agile - SAFe Agilist & SAFe Practitioner (4.0), Scaled Agile Inc."
+  ]
+}

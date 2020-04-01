@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Route, Switch } from "react-router-dom";
 import { withStyles } from '@material-ui/core/styles';
-import MainContainer from './MainContainer';
+import MainContainer from './MainContainer.hoc';
 import LandingPage from './LandingPage';
 import About from '../tabContent/About';
 import Contact from '../tabContent/Contact';
-import TechStack from '../tabContent/TechStack';
+import TechStack from '../tabContent/Tech';
 import Footer from '../otherSections/Footer';
 import BreadCrumbLinks from '../otherSections/BreadCrumbLinks';
 

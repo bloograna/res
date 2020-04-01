@@ -2,22 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Container, Grid, Card, CardMedia, CardContent, Typography, withStyles } from '@material-ui/core';
 import { ListItemLink, breadcrumbNameMap } from '../otherSections/BreadCrumbLinks';
-import dabImg from '../../file/dab.png'
 
 const styles = theme => ({
   icon: {
     marginRight: theme.spacing(2),
   },
   landingContainer: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center'
+    display: 'flex'
   },
   cardGrid: {
     paddingTop: theme.spacing(8),
     paddingBottom: theme.spacing(8),
-    display: 'flex',
-    height: '100%',
+    display: 'flex'
   },
   card: {
     height: '100%',
@@ -41,11 +37,11 @@ const LandingPage = ({ classes }) =>
     <Grid container spacing={4} className={classes.landingContainer}>
       {Object.entries(breadcrumbNameMap).slice(1).map((path) => (
         <Grid item key={path[1]} xs={12} sm={6} md={4}>
-          <Card className={classes.card}>
+          <Card className={classes.card} variant="outlined">
             <CardMedia
               className={classes.cardMedia}
-              image={dabImg}
-              title="Image title"
+              image="https://source.unsplash.com/random"
+              title={path[1]}
             />
             <CardContent className={classes.cardContent} >
               <Typography gutterBottom variant="h5" component="h2">

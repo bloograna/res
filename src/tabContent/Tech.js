@@ -3,8 +3,7 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import grey from '@material-ui/core/colors/grey';
-import techStack from '../../file/techStack';
-// import { PolarArea } from 'react-chartjs';
+import techStack from '../../file/tech';
 
 const styles = {
   root: {
@@ -25,7 +24,7 @@ const styles = {
 };
 
 
-class TechStack extends React.Component {
+class TechStack extends React.PureComponent {
   render() {
     const { classes } = this.props;
     const tech = JSON.stringify(techStack, null, 2);
@@ -34,9 +33,6 @@ class TechStack extends React.Component {
       <div className={classes.root}>
         <Typography className={classes.codeBlock} component="pre">
           <code>{tech}</code>
-        </Typography>
-        <Typography className={classes.disclaimer} variant="body1">
-          * This is not an actual stack.
         </Typography>
       </div>
     );
