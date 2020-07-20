@@ -42,7 +42,7 @@
     "eslint-plugin-prettier": "~2.6.0",
     "i": "~0.3.6",
     "js-logger": "^1.4.1",
-    "lodash": "^4.17.4",
+    "lodash": "^4.17.19",
     "node-safe-filesaver": "~0.1.0",
     "npm": "~6.2.0",
     "prop-types": "^15.5.1",
